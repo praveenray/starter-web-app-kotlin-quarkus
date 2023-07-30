@@ -1,0 +1,21 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="crschema" author="TEAM" runOnChange="true">
+        <sql splitStatements="true" stripComments="true">
+            create schema if not exists "${database.defaultSchemaName}"
+        </sql>
+    </changeSet>
+
+    <changeSet id="db-schema" author="TEAM">
+        <sqlFile path="000_schema.sql"
+                 relativeToChangelogFile="true"
+                 splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+    <changeSet id="insert-users" author="TEAM">
+        <sqlFile path="001_insert_users.sql"
+                 relativeToChangelogFile="true"
+                 splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+</databaseChangeLog>
