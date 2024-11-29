@@ -1,4 +1,4 @@
-# Ecample-app
+# Example-app
 An Example Web App to get you booted quickly with Kotlin+JooQ+Quarkus
 
 ### Development Setup
